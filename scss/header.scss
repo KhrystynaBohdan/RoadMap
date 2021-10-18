@@ -18,24 +18,25 @@
   &__title{
     font-size: 24px;
     line-height: 28px;
-    color: #607D8B;
+    color: $grey-blue;
   }
   &__subtitle{
     font-size: 16px;
     line-height: 24px;
-    color: #263238;
-  }
-  &__year{
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
-    color: #263238;
-    padding: 24px 0;
+    color: $dark-grey-blue;
   }
   &__description{
     font-size: 12px;
     line-height: 16px;
-    color: #263238;
+    color: $dark-grey-blue;
     margin-left: 8px;
   }
 }
+
+.header-year {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: $dark-grey-blue;
+    padding: 24px 0;
+  }

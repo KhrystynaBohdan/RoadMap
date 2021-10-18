@@ -7,9 +7,11 @@
   box-sizing: border-box;
   height: 600px;
   gap: 45px;
+  padding-bottom: 16px;
 
   &__section {
     display: grid;
+    gap: 8px;
   }
 
   &__bar-icons {
@@ -22,14 +24,12 @@
     grid-template-columns: repeat(21, 1fr);
     z-index: 1;
     column-gap: 1px;
-    height: 48px;
   }
   &__row--lines {
     position: absolute;
     height: 100%;
     width: 100%;
     background-color: $white;
-    grid-template-columns: repeat(21, 1fr);
   }
 
   &__row--lines span {
@@ -59,7 +59,7 @@
     background-color: #ECEFF1;
     border-radius: 100px;
     padding: 8px 8px 8px 12px;
-    color: #263238;
+    color: $dark-grey-blue;
     overflow: hidden;
     position: relative;
     cursor: pointer;

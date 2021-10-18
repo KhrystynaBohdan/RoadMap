@@ -7,6 +7,12 @@
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
+
+  transition: 0.2s;
+  &:hover {
+    box-shadow: $grey-blue 0px 5px 10px 0px;
+    transform: translatey(-5px);
+  }
 }
 
 @mixin display {

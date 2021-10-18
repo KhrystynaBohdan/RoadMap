@@ -2,7 +2,7 @@
   &__month {
     text-align: center;
     transform: translate(50%, 10px);
-    color: #607D8B;
+    color: $grey-blue;
     font-weight: 500;
     font-size: 10px;
     line-height: 16px;
@@ -11,7 +11,7 @@
 
   &__month-grey {
     color: $white;
-    background-color: #607D8B;
+    background-color: $grey-blue;
     border-radius: 99px;
     padding: 5px 10px;
   }
