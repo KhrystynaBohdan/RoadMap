@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  height: 632px;
+  height: 600px;
   gap: 45px;
 
   &__section {
@@ -24,12 +24,6 @@
     column-gap: 1px;
     height: 48px;
   }
-
-  &__row--small {
-    height: 32px;
-    line-height: 18px;
-  }
-
   &__row--lines {
     position: absolute;
     height: 100%;
@@ -50,10 +44,8 @@
 
   &__row-bars {
     display: grid;
-    padding: 9px 0;
     margin: 0;
     grid-template-columns: repeat(21, 1fr);
-    grid-gap: 8px 0;
   }
 
   &__row-bars--first {
@@ -61,8 +53,6 @@
   }
 
   &__row-developer {
-    display: flex;
-    justify-content: space-between;
     width: 145px;
     height: 32px;
     grid-column: 1/3;
@@ -77,10 +67,10 @@
     line-height: 16px;
     text-align: right;
     min-height: 32px;
+    @include display;
   }
 
   //DEVELOPERS TEAM
-
   &__bar-first {
     display: flex;
     gap: 1px;
@@ -89,168 +79,84 @@
   &__bar-design {
     grid-column: 1/5;
     background-color: $blue;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
   }
 
   &__bar-chart {
-    display: flex;
-    justify-content: space-between;
     grid-column: 5/11;
     background-color: $green;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
+    @include display;
   }
 
   &__bar-dashboard {
-    display: flex;
-    justify-content: space-between;
     grid-column: 7/11;
     background-color: $orange;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
+    @include display;
   }
 
   &__bar-backup {
-    display: flex;
-    justify-content: space-between;
     grid-column: 11/17;
     background-color: $orange;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
     z-index: 9;
+    @include bar;
+    @include display;
 
     &:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
       right: 90%;
-      bottom: 0;
-      left: 0;
       background: #f58224;
+      @include before;
     }
   }
 
   &__bar-purchaising {
-    display: flex;
-    justify-content: space-between;
     grid-column: 17/22;
     background-color: $blue;
-    border-radius: 4px;
     font-weight: 700;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    width: calc(100% + 10px);
+    @include bar;
+    @include display;
   }
 
   &__bar-purchaisnow {
-    display: flex;
-    justify-content: space-between;
     grid-column: 6/10;
     background-color: $salmon;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    min-height: 32px;
+    height: 32px;
+    @include bar;
+    line-height: 18px;
+    @include display;
   }
 
   &__bar-self {
-    display: flex;
-    justify-content: space-between;
     grid-column: 10/16;
     background-color: $green;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    min-height: 32px;
+    height: 32px;
+    @include bar;
+    line-height: 18px;
+    @include display;
   }
 
   &__bar-boost {
-    display: flex;
-    justify-content: space-between;
     grid-column: 16/21;
     background-color: $blue;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    min-height: 32px;
+    height: 32px;
+    @include bar;
+    line-height: 18px;
+    @include display;
   }
 
   //DESIGNERS TEAM
-
   &__bar-kit {
-    display: flex;
-    justify-content: space-between;
     grid-column: 1/5;
     background-color: #E289F2;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
+    @include display;
   }
 
   &__bar-ux {
     background-color: $blue;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
   }
 
   &__bar-ux--one {
@@ -266,234 +172,101 @@
   }
 
   &__bar-material {
-    display: flex;
-    justify-content: space-between;
     grid-column: 17/22;
     background-color: #E289F2;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
     line-height: 24px;
-    min-height: 32px;
+    width: calc(100% + 10px);
+    @include bar;
+    @include display;
   }
 
   &__bar-android {
-    display: flex;
-    justify-content: space-between;
     grid-column: 5/11;
     background-color: $green;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
     z-index: 9;
+    @include bar;
+    @include display;
 
     &:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
       right: 25%;
-      bottom: 0;
-      left: 0;
       background: $dark-green;
+      @include before;
     }
   }
 
   &__bar-minimal {
     background-color: $green;
     grid-column: 11/15;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
   }
 
   &__bar-prototyping {
     background-color: $orange;
     grid-column: 15/17;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
   }
 
   &__bar-gui {
-    display: flex;
-    justify-content: space-between;
     background-color: #E289F2;
     grid-column: 17/20;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
+    @include display;
   }
 
   //  MARKETING TEAM
   &__bar-fits {
-    display: flex;
-    justify-content: space-between;
     background-color: $orange;
     grid-column: 1/6;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
+    @include display;
   }
 
   &__bar-presentation {
     background-color: $blue;
-    border-radius: 4px;
     grid-column: 6/11;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
   }
 
   &__bar-purchaisingfigma {
-    display: flex;
-    justify-content: space-between;
     background-color: #E289F2;
     grid-column: 11/16;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
+    @include display;
   }
 
   &__bar-premium {
-    display: flex;
-    justify-content: space-between;
     grid-column: 18/22;
     background-color: $dark-green;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    width: calc(100% + 10px);
+    @include bar;
+    @include display;
   }
 
   &__bar-deploy {
-    display: flex;
-    justify-content: space-between;
     background-color: #E289F2;
     grid-column: 3/11;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
     z-index: 1;
+    @include bar;
+    @include display;
 
     &:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
       right: 76%;
-      bottom: 0;
-      left: 0;
       background: #d451f1;
+      @include before;
     }
   }
 
   &__bar-database {
-    display: flex;
-    justify-content: space-between;
     background-color: $orange;
     grid-column: 11/17;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
+    @include bar;
+    @include display;
   }
 
   &__bar-ohno {
-    display: flex;
-    justify-content: space-between;
     background-color: $salmon;
     grid-column: 17/20;
-    border-radius: 4px;
-    padding: 8px;
-    color: $white;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-    min-height: 32px;
-  }
-
-  //  MONTH
-  &__month {
-    text-align: center;
-    transform: translate(50%, 10px);
-    color: #607D8B;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 16px;
-    letter-spacing: 1px;
-  }
-
-  &__month--grey {
-    color: $white;
-    background-color: #607D8B;
-    border-radius: 99px;
-    height: 16px;
-    width: 48px;
-    transform: translate(78%, 64%);
-    //  todo
+    @include bar;
+    @include display;
   }
 }

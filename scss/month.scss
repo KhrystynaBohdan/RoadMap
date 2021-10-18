@@ -1,1 +1,18 @@
+.diagram {
+  &__month {
+    text-align: center;
+    transform: translate(50%, 10px);
+    color: #607D8B;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1px;
+  }
 
+  &__month-grey {
+    color: $white;
+    background-color: #607D8B;
+    border-radius: 99px;
+    padding: 5px 10px;
+  }
+}
